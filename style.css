@@ -75,3 +75,34 @@ a {
     color: #BF1120;
     font-weight: 700;
 }
+
+.contents {
+    padding: 5em 25%;
+}
+
+.contents-card {
+    margin-bottom: 50px;
+}
+
+.contents-header {
+    font-size: 1.7em;
+    padding: 1em 0;
+    margin-bottom: 15px;
+}
+
+.contents-data > p {
+    margin-bottom: 25px;
+}
+
+.contents-data > p > i {
+    width: 20px;
+}
+
+.career-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.career-list-item > p {
+    margin-bottom: 5px;
+}
