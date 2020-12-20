@@ -32,6 +32,12 @@ a {
     text-decoration: none;
 }
 
+button:active,
+button:focus,
+button:visited {
+    outline: 0;
+}
+
 .portfolio-title {
     text-align: center;
     padding: 6em 0;
@@ -84,14 +90,13 @@ a {
     font-weight: 700;
 }
 
-.nav-menu-item button:active,
-.nav-menu-item button:focus,
-.nav-menu-item button:visited {
-    outline: 0;
+#toggle-nav-button {
+    visibility: hidden;
+    position: absolute;
 }
 
 .contents {
-    padding: 5em 25%;
+    padding: 5em 12em;
 }
 
 .contents-card {
@@ -128,4 +133,83 @@ a {
 
 .career-list-item > p {
     margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1235px) {
+    .contents {
+        padding: 5em 8em;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    body {
+        font-size: 14px;
+    }
+    .nav-menu-item button,
+    .nav-menu-item a {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .contents {
+        padding: 5em 6em;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    body {
+        font-size: 12px;
+    }
+    .nav-menu-item button,
+    .nav-menu-item a {
+        padding-left: 1.5em;
+        padding-right:1.5em;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    body {
+        padding: 0;
+    }
+    .nav-menu-item button,
+    .nav-menu-item a {
+        padding-left: 1em;
+        padding-right:1em;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        padding: 0;
+    }
+    .portfolio-title {
+        padding: 6em 1em;
+    }
+    .menu-container {
+        position: fixed;
+        top: 0.5em;
+        left: 0.5em;
+    }
+    #toggle-nav-button {
+        visibility: visible;
+        font-size: 2em;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    #menu-list {
+        display: none;
+        position: absolute;
+        top: 3em;
+        left: 0.5em;
+        background-color: #fcfcfc;
+    }
+    .nav-menu-item {
+        display: block
+    }
+    .contents {
+        padding: 5em 2em;
+    }
 }

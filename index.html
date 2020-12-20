@@ -14,30 +14,35 @@
     </header>
     <nav id="nav-menu">
         <h2 class="sr-only">메뉴</h2>
-        <ul>
-            <li class="nav-menu-item" data-category="introduction">
-                <button type="button">Introduction</button>
-            </li>
-            <li class="nav-menu-item" data-category="skills">
-                <button type="button">Skills</button>
-            </li>
-            <li class="nav-menu-item" data-category="career">
-                <button type="button">Career</button>
-            </li>
-            <li class="nav-menu-item" data-category="projects">
-                <button type="button">Projects</button>
-            </li>
-            <li class="nav-menu-item">
-                <a
-                    href="https://enai.tistory.com"
-                    target="_blank"
-                    aria-label="외부 링크"
-                >
-                    Blog
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </li>
-        </ul>
+        <div class="menu-container">
+            <button type="button" id="toggle-nav-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="menu-list">
+                <li class="nav-menu-item" data-category="introduction">
+                    <button type="button">Introduction</button>
+                </li>
+                <li class="nav-menu-item" data-category="skills">
+                    <button type="button">Skills</button>
+                </li>
+                <li class="nav-menu-item" data-category="career">
+                    <button type="button">Career</button>
+                </li>
+                <li class="nav-menu-item" data-category="projects">
+                    <button type="button">Projects</button>
+                </li>
+                <li class="nav-menu-item">
+                    <a
+                        href="https://enai.tistory.com"
+                        target="_blank"
+                        aria-label="외부 링크"
+                    >
+                        Blog
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <main class="contents">
         <section class="contents-card" id="introduction">
