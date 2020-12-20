@@ -16,16 +16,16 @@
         <h2 class="sr-only">메뉴</h2>
         <ul>
             <li class="tab-menu-item selected">
-                <a href="#">Introduction</a>
+                <button onClick="moveToSelectedContents('introduction')">Introduction</button>
             </li>
             <li class="tab-menu-item">
-                <a href="#">Skills</a>
+                <button onClick="moveToSelectedContents('skills')">Skills</button>
             </li>
             <li class="tab-menu-item">
-                <a href="#">Career</a>
+                <button onClick="moveToSelectedContents('career')">Career</button>
             </li>
             <li class="tab-menu-item">
-                <a href="#">Projects</a>
+                <button onClick="moveToSelectedContents('projects')">Projects</button>
             </li>
             <li class="tab-menu-item">
                 <a
@@ -40,7 +40,7 @@
         </ul>
     </nav>
     <main class="contents">
-        <section class="contents-card">
+        <section class="contents-card" id="introduction">
             <h3 class="contents-header">Introduction</h3>
             <div class="contents-data">
                 <p aria-label="이름">
@@ -58,7 +58,7 @@
                 </p>
             </div>
         </section>
-        <section class="contents-card">
+        <section class="contents-card" id="skills">
             <h3 class="contents-header">
                 Skills
             </h3>
@@ -101,7 +101,7 @@
                 </li>
             </ul>
         </section>
-        <section class="contents-card">
+        <section class="contents-card" id="career">
             <h3 class="contents-header">Career</h3>
             <ol>
                 <li class="career-list-item">
@@ -117,7 +117,7 @@
                 </li>
             </ol>
         </section>
-        <section class="contents-card">
+        <section class="contents-card" id="projects">
             <h3 class="contents-header">Projects</h3>
             <div>
                 준비 중...
@@ -125,5 +125,7 @@
             </div>
         </section>
     </main>
+
+    <script src="./app.js"></script>
 </body>
 </html>
