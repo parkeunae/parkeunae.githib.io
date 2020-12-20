@@ -98,9 +98,18 @@ a {
     width: 20px;
 }
 
-.career-list {
-    list-style-type: none;
-    padding-left: 0;
+.skill-list-item {
+    display: inline-block;
+    width: 10em;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skill-list-item .logo {
+    display: block;
+    height: 2.5em;
+    margin: 0 auto;
 }
 
 .career-list-item > p {
