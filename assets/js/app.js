@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navigationMenu.style.backgroundColor = '#fff';
 
         const bodyElement = document.querySelector('body');
-        bodyElement.style.padding = navHeight+'px 2em 0';
+        bodyElement.style.paddingTop = navHeight+'px';
     }
 
     const getBackFixedNavigation = () => {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navigationMenu.style.backgroundColor = '#transparent';
 
         const bodyElement = document.querySelector('body');
-        bodyElement.style.padding = '0 2em';
+        bodyElement.style.paddingTop = '0';
     }
 
     const displayCurrentMenu = (scrollLocation) => {

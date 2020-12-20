@@ -19,7 +19,6 @@
 
 body {
     margin: 0 auto;
-    padding: 0 2em;
     font-size: 16px;
     min-width: 267px;
 }
@@ -50,7 +49,7 @@ button:visited {
     margin-bottom: 0.5em;
 }
 
-#nav-menu {
+.menu-container {
     border-top: 1px solid #E5E5E5;
     border-bottom: 1px solid #E5E5E5;
 }
@@ -101,7 +100,7 @@ button:visited {
 }
 
 .contents-card {
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 .contents-header {
@@ -141,13 +140,22 @@ button:visited {
     margin-bottom: 5px;
 }
 
-@media screen and (max-width: 1235px) {
+@media only screen and (max-width: 1235px) {
+    #nav-menu {
+        padding: 0 5em;
+    }
     .contents {
         padding: 5em 8em;
     }
 }
 
-@media screen and (max-width: 860px) {
+@media only screen and (max-width: 950px) {
+    #nav-menu {
+        padding: 0 2em;
+    }
+}
+
+@media only screen and (max-width: 860px) {
     body {
         font-size: 14px;
     }
@@ -158,7 +166,7 @@ button:visited {
     }
 }
 
-@media screen and (max-width: 690px) {
+@media only screen and (max-width: 690px) {
     .contents {
         padding: 5em 6em;
     }
@@ -175,8 +183,11 @@ button:visited {
     }
 }
 
-@media screen and (max-width: 462px) {
+@media only screen and (max-width: 462px) {
     body {
+        padding: 0;
+    }
+    #nav-menu {
         padding: 0;
     }
     .nav-menu-item button,
@@ -186,7 +197,7 @@ button:visited {
     }
 }
 
-@media screen and (max-width: 376px) {
+@media only screen and (max-width: 376px) {
     body {
         padding: 0;
     }
