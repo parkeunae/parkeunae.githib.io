@@ -22,6 +22,11 @@ ModifyClass.prototype = {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const introductionCard = document.querySelector('#introduction');
+    const skillsCard = document.querySelector('#skills');
+    const careerCard = document.querySelector('#career');
+    const projectsCard = document.querySelector('#projects');
+
     // 네비게이션 메뉴 선택 이벤트
     const menuList = document.querySelector('#menu-list');
 
@@ -30,28 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const clickedTag = target.tagName;
         if (clickedTag === 'UL' || clickedTag === 'A' || clickedTag === 'I') return;
 
-        const categoryId = changeSelectedClass(target);
+        const categoryId = getCategoryId(target);
 
         moveToSelectedContents(categoryId);
     });
 
-    const changeSelectedClass = (target) => {
+    const getCategoryId = (target) => {
         const clickedTag = target.tagName;
-        const selectedClassName = 'selected';
-        const buttonList = menuList.querySelectorAll('.nav-menu-item');
+        const listItemList = menuList.querySelectorAll('.nav-menu-item');
         let categoryId = '';
         let selectedMenu;
 
-        const modifyActive = new ModifyClass();
-
-        modifyActive.removeAllClasses(buttonList, selectedClassName);
-        if (clickedTag === 'LI') {
+       if (clickedTag === 'LI') {
             selectedMenu = target;
-            modifyActive.addClass(selectedMenu, selectedClassName);
             categoryId = selectedMenu.dataset.category;
         } else if (clickedTag === 'BUTTON') {
             selectedMenu = target.parentElement;
-            modifyActive.addClass(selectedMenu, selectedClassName);
             categoryId = selectedMenu.dataset.category;
         }
 
@@ -87,10 +86,30 @@ document.addEventListener('DOMContentLoaded', () => {
         bodyElement.style.padding = '0 2em';
     }
 
-    const mediaQuery = window.matchMedia('screen and (max-width: 376px)');
+    const displayCurrentMenu = (scrollLocation) => {
+        const modifyActive = new ModifyClass();
+        const selectedClassName = 'selected';
+        const listItemList = menuList.querySelectorAll('.nav-menu-item');
+
+        modifyActive.removeAllClasses(listItemList, selectedClassName);
+        if (scrollLocation < introductionCard.offsetTop - navHeight ) {
+            return;
+        }
+        if (scrollLocation >= projectsCard.offsetTop - navHeight) {
+            modifyActive.addClass(listItemList.item(3), selectedClassName);
+        } else if (scrollLocation >= careerCard.offsetTop - navHeight) {
+            modifyActive.addClass(listItemList.item(2), selectedClassName);
+        } else if (scrollLocation >= skillsCard.offsetTop - navHeight) {
+            modifyActive.addClass(listItemList.item(1), selectedClassName);
+        } else {
+            modifyActive.addClass(listItemList.item(0), selectedClassName);
+        }
+    }
+
+    const maxWidth376px = window.matchMedia('screen and (max-width: 376px)');
     // 스크롤 이동 시 이벤트
     window.addEventListener('scroll', () => {
-        if (mediaQuery.matches) {
+        if (maxWidth376px.matches) {
             return;
         }
 
@@ -104,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (scrollLocation < headerHeight) {
             getBackFixedNavigation();
         }
+
+        displayCurrentMenu(scrollLocation);
     });
 
     const toggleNavigationMenu = () => {
