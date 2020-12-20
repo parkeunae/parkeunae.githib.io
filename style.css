@@ -1,0 +1,77 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Spoqa Han Sans Neo', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 2em;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.portfolio-title {
+    text-align: center;
+    padding: 6em 0;
+}
+
+.portfolio-title h1 {
+    text-shadow: 0.075em 0.075em 0em rgba(0, 0, 0, 0.1);
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.tab-menu {
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.tab-menu ul {
+    text-align: center;
+    padding-left: 0;
+}
+
+.tab-menu-item {
+    display: inline-block
+}
+
+.tab-menu-item a {
+    line-height: 60px;
+    line-height: 60px;
+    padding: 0.5em 3em;
+    color: #1D2326;
+}
+
+.tab-menu-item.selected a,
+.tab-menu-item.selected a:hover {
+    background-color: #BF1120;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.tab-menu-item a:hover {
+    color: #BF1120;
+    font-weight: 700;
+}

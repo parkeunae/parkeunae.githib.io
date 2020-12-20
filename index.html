@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Park Eunae</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/1334469cec.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="portfolio-title">
         <h1>Front-end developer</h1>
         <p>안녕하세요, 프론트엔드 개발자 박은애입니다.</p>
     </header>
-    <nav>
-        <h2>메뉴</h2>
+    <nav class="tab-menu">
+        <h2 class="sr-only">메뉴</h2>
         <ul>
-            <li>
+            <li class="tab-menu-item selected">
                 <a href="#">Introduction</a>
             </li>
-            <li>
+            <li class="tab-menu-item">
                 <a href="#">Skills</a>
             </li>
-            <li>
+            <li class="tab-menu-item">
                 <a href="#">Career</a>
             </li>
-            <li>
+            <li class="tab-menu-item">
                 <a href="#">Projects</a>
             </li>
-            <li>
-                <a href="https://enai.tistory.com" target="_blank">Blog</a>
+            <li class="tab-menu-item">
+                <a
+                    href="https://enai.tistory.com"
+                    target="_blank"
+                    aria-label="외부 링크"
+                >
+                    Blog
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
             </li>
         </ul>
     </nav>
