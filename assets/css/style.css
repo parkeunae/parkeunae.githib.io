@@ -21,6 +21,7 @@ body {
     margin: 0 auto;
     padding: 0 2em;
     font-size: 16px;
+    min-width: 267px;
 }
 
 ul, ol {

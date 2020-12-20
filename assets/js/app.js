@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navigationMenu.style.backgroundColor = '#fff';
 
         const bodyElement = document.querySelector('body');
-        bodyElement.style.padding = navHeight+'px 0 0 0';
+        bodyElement.style.padding = navHeight+'px 2em 0';
     }
 
     const getBackFixedNavigation = () => {
